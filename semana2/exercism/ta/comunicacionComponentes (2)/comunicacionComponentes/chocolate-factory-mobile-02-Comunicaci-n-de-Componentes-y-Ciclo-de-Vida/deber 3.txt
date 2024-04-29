@@ -1,0 +1,43 @@
+import React, { Component } from 'react';
+
+class ProductionStatus extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      productionStatus: 'Initial'
+    };
+  }
+
+  componentDidMount() {
+    // Simulación de inicio de producción
+    this.startProduction();
+  }
+
+  componentWillUnmount() {
+    // Detener cualquier proceso en curso al desmontar el componente
+    this.stopProduction();
+  }
+
+  startProduction() {
+    // Simular inicio de producción
+    this.productionInterval = setInterval(() => {
+      // Aquí podrías realizar llamadas a API o cambios de estado más complejos
+      // Por simplicidad, solo actualizamos el estado
+      this.setState({ productionStatus: 'In Progress' });
+    }, 2000); // Cambia el tiempo de intervalo según tu necesidad
+  }
+
+  stopProduction() {
+    // Detener la simulación de producción
+    clearInterval(this.productionInterval);
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Production Status: {this.state.productionStatus}</h2>
+      </div>
+    );
+  }
+}
+

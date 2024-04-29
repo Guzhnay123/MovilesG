@@ -1,0 +1,66 @@
+import React, { Component } from 'react';
+
+class ProductionStatus extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      productionStatus: 'Initial'
+    };
+  }
+
+  componentDidMount() {
+    // Simulación de inicio de producción
+    this.startProduction();
+  }
+
+  componentWillUnmount() {
+    // Detener cualquier proceso en curso al desmontar el componente
+    this.stopProduction();
+  }
+
+  startProduction() {
+    // Simular inicio de producción
+    this.productionInterval = setInterval(() => {
+      // Aquí podrías realizar llamadas a API o cambios de estado más complejos
+      // Por simplicidad, solo actualizamos el estado
+      this.setState({ productionStatus: 'In Progress' });
+    }, 2000); // Cambia el tiempo de intervalo según tu necesidad
+  }
+
+  stopProduction() {
+¨
+
+
+
+
+
+
+
+
+
+
+
+
+Este componente de React ProductionStatus muestra el estado actual de la producción de un elemento. Utiliza los métodos del ciclo de vida componentDidMount y componentWillUnmount para iniciar y detener la simulación de producción, respectivamente. Dentro de estos métodos, se llama a startProduction para iniciar el proceso y a stopProduction para detenerlo.
+
+Puedes integrar este componente en tu aplicación React y adaptarlo según tus necesidades específicas. Por ejemplo, podrías reemplazar la lógica de simulación de producción con llamadas a una API real para obtener el estado de producción actual.
+
+
+
+
+
+
+
+    // Detener la simulación de producción
+    clearInterval(this.productionInterval);
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Production Status: {this.state.productionStatus}</h2>
+      </div>
+    );
+  }
+}
+
