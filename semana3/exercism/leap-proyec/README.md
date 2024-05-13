@@ -13,7 +13,7 @@ handleCheckLeapYear: Este manejador se llama cuando el usuario hace clic en el b
 
 6)Función isLeapYear: Esta función toma un año como argumento y devuelve true si es un año bisiesto y false si no lo es, siguiendo las reglas estándar de los años bisiestos.
 
-7)Interfaz de usuario: El componente renderiza una etiqueta div que contiene un título (<h1>), un input donde el usuario puede ingresar el año, un botón para verificar si es un año bisiesto y un párrafo que mostrará el resultado de la verificación.
+7)Interfaz de usuario: El componente renderiza una etiqueta div que contiene un título (<h1>), un input donde el usuario puede ingresar el año, un botón para verificar si es un año bisiesto y un ), un input donde el usuario puede ingresar el año, un botón para verificar si es un año bisiesto y un párrafo que mostrará el resultado de la verificación.
 
 8)Condicional de renderizado: El párrafo que muestra el resultado se renderiza solo si isLeap no es null. Muestra un mensaje indicando si el año ingresado es un año bisiesto o no.
 
