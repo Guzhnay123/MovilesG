@@ -1,43 +1,12 @@
-Importación de React:
-
-javascript
-
-import React from 'react';
-Aquí se importa la librería de React para poder utilizarla en el archivo.
-
-Definición del array de colores de resistores:
-
-javascript
-const coloresResistores: string[] = [
-  'Negro', 'Marrón', 'Rojo', 'Naranja', 'Amarillo',
-  'Verde', 'Azul', 'Violeta', 'Gris', 'Blanco'
-];
-Se define un array llamado coloresResistores que contiene una lista de colores representados como cadenas de texto. Este array se utilizará para renderizar los elementos de la lista en el componente.
-
-Definición del componente:
-
-javascript
-
-const Componente: React.FC = () => (
-  <div>
-    <h1>Resistores</h1>
-    <ul>
-      {coloresResistores.map((color, index) => (
-        <li key={index}>{color}</li>
-      ))}
-    </ul>
-  </div>
-);
-Se define un componente funcional llamado Componente. Este componente renderiza un título <h1> que dice "Resistores" y una lista <ul> de elementos <li> que contienen los colores de resistores. Utiliza el método map para iterar sobre el array coloresResistores y generar un elemento <li> para cada color. Se utiliza la propiedad key para asignar una clave única a cada elemento de la lista, en este caso, se utiliza el índice del array.
-
-Exportación del componente:
-
-javascript
-export default Componente;
-Se exporta el componente Componente para que pueda ser utilizado en otros archivos de React.
-
-Este código muestra cómo definir un componente simple en React que renderiza una lista de elementos a partir de un array de datos.
-
+Se importa React desde la biblioteca 'react'.
+Se define una matriz coloresResistores que contiene los nombres de los colores de los resistores como strings.
+Estos colores siguen el estándar de codificación de resistores, donde cada color representa un número específico.
+Se define un componente de función llamado Componente 
+Que es un componente de React funcional. Este componente no acepta ninguna propiedad (props), por eso se utiliza React.FC (Componente Funcional).
+Dentro del componente Componente, se renderiza un div que contiene un encabezado h1 con el texto "Resistores" y una lista ul.
+Se utiliza el método map() en la matriz coloresResistores para generar una lista de elementos li, donde cada elemento representa un color de resistor. El key de cada elemento se establece como el índice del color en la matriz, lo que ayuda a React a identificar los elementos de forma única y optimizar el rendimiento.
+Finalmente, el componente Componente se exporta como el componente predeterminado de este archivo para que pueda ser utilizado en otros archivos de React.
+En resumen, este componente muestra una lista simple de colores de resistores en un formato fácil de leer.
 
 
 
