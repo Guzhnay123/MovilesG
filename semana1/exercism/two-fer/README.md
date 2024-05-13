@@ -1,30 +1,9 @@
-# React + TypeScript + Vite
+1)import React from 'react';: Importa la biblioteca React para poder utilizarla en este archivo.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2)function App() { ... }: Define una función de componente de React llamada App. Los componentes de React son funciones que devuelven elementos de interfaz de usuario.
 
-Currently, two official plugins are available:
+3)let friendName: string = 'Diegp';: Declara una variable llamada friendName y le asigna el valor de 'Diegp'. El tipo de esta variable se especifica como string, lo que significa que solo puede contener texto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4)let dialogue: string;: Declara una variable llamada dialogue con el tipo string, pero no le asigna ningún valor inicial.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+5)if (friendName !== 'Do-yun') { ... } else { ... }: Realiza una comprobación condicional. Si el valor de friendName no es igual a 'Do-yun', se ejecuta el bloque de código dentro del primer conjunto de llaves. De lo contrario, se ejecuta el bloque de código dentro del segundo conjunto de llaves.
