@@ -2,9 +2,9 @@
 
 2)Se define una matriz coloresResistores que contiene los nombres de los colores de los resistores como strings.
 
-3(Estos colores siguen el estándar de codificación de resistores, donde cada color representa un número específico.
+3)Estos colores siguen el estándar de codificación de resistores, donde cada color representa un número específico.
 
-4) Se define un componente de función llamado Componente 
+4)Se define un componente de función llamado Componente 
 Que es un componente de React funcional. Este componente no acepta ninguna propiedad (props), por eso se utiliza React.FC (Componente Funcional).
 
 5)Dentro del componente Componente, se renderiza un div que contiene un encabezado h1 con el texto "Resistores" y una lista ul.
@@ -13,7 +13,7 @@ Que es un componente de React funcional. Este componente no acepta ninguna propi
 
 7)Finalmente, el componente Componente se exporta como el componente predeterminado de este archivo para que pueda ser utilizado en otros archivos de React.
 
-8) En resumen, este componente muestra una lista simple de colores de resistores en un formato fácil de leer.
+8)En resumen, este componente muestra una lista simple de colores de resistores en un formato fácil de leer.
 
 
 
