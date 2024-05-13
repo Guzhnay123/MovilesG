@@ -14,11 +14,8 @@ Manejadores de eventos:
 6)handleCheckLeapYear: Este manejador se llama cuando el usuario hace clic en el botón "Check" para verificar si el año ingresado es un año bisiesto. Convierte el año ingresado a un número entero y luego llama a la función isLeapYear para determinar si es un año bisiesto.
 Función isLeapYear: Esta función toma un año como argumento y devuelve true si es un año bisiesto y false si no lo es, siguiendo las reglas estándar de los años bisiestos.
 
-7)Interfaz de usuario: El componente renderiza una etiqueta div que contiene un título (<h1>), un input donde el usuario puede ingresar el año, un botón para verificar si es un año bisiesto y un párrafo que mostrará el resultado de la verificación.
 
-8)Condicional de renderizado: El párrafo que muestra el resultado se renderiza solo si isLeap no es null. Muestra un mensaje indicando si el año ingresado es un año bisiesto o no.
 
-En resumen, este código crea un componente de React que permite al usuario ingresar un año y verificar si es un año bisiesto o no, utilizando estados para manejar la entrada del usuario y el resultado de la verificación.
 
 
 
