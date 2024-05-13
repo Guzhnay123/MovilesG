@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+Importación de React:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+javascript
 
-Currently, two official plugins are available:
+import React from 'react';
+Aquí se importa la librería de React para poder utilizarla en el archivo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Definición del array de colores de resistores:
 
-## Expanding the ESLint configuration
+javascript
+const coloresResistores: string[] = [
+  'Negro', 'Marrón', 'Rojo', 'Naranja', 'Amarillo',
+  'Verde', 'Azul', 'Violeta', 'Gris', 'Blanco'
+];
+Se define un array llamado coloresResistores que contiene una lista de colores representados como cadenas de texto. Este array se utilizará para renderizar los elementos de la lista en el componente.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Definición del componente:
 
-- Configure the top-level `parserOptions` property like this:
+javascript
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+const Componente: React.FC = () => (
+  <div>
+    <h1>Resistores</h1>
+    <ul>
+      {coloresResistores.map((color, index) => (
+        <li key={index}>{color}</li>
+      ))}
+    </ul>
+  </div>
+);
+Se define un componente funcional llamado Componente. Este componente renderiza un título <h1> que dice "Resistores" y una lista <ul> de elementos <li> que contienen los colores de resistores. Utiliza el método map para iterar sobre el array coloresResistores y generar un elemento <li> para cada color. Se utiliza la propiedad key para asignar una clave única a cada elemento de la lista, en este caso, se utiliza el índice del array.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Exportación del componente:
+
+javascript
+export default Componente;
+Se exporta el componente Componente para que pueda ser utilizado en otros archivos de React.
+
+Este código muestra cómo definir un componente simple en React que renderiza una lista de elementos a partir de un array de datos.
+
+
+
+
+
+
