@@ -1,0 +1,38 @@
+¿Qué es Zustand y cuál es su propósito en el desarrollo de aplicaciones React? [4]
+
+
+A. Una biblioteca de gestión de estado para React que se centra en la simplicidad y el rendimiento.
+
+B. Un marco de diseño para la creación de interfaces de usuario en React.
+
+C. Una extensión de Redux para manejar el estado en aplicaciones React.
+
+
+ANSWER: A
+
+
+¿Cuáles son los requisitos necesarios para comenzar a trabajar con Zustand? [4]
+
+
+A. Experiencia previa con frameworks de gestión de estado como Redux.
+
+B. Conocimiento básico de React y TypeScript.
+
+C. Un servidor de base de datos para almacenar el estado de la aplicación.
+
+
+ANSWER: B
+
+
+¿Cuáles son las principales características y ventajas de usar Zustand para la gestión del estado en aplicaciones React, 
+en términos de rendimiento, sintaxis y facilidad de uso? [4]
+
+
+A. Mayor complejidad en comparación con otras soluciones de gestión de estado como Redux.
+
+B. Mejora del rendimiento al evitar la re-rendización innecesaria de componentes.
+
+C. Requiere una curva de aprendizaje pronunciada debido a su sintaxis complicada.
+
+
+ANSWER: B
