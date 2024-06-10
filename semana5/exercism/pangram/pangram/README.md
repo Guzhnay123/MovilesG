@@ -1,30 +1,70 @@
-# React + TypeScript + Vite
+                             Pangram:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Verifica si una Oración Tiene Todas las Letras
+Pangram es una herramienta que revisa si una oración tiene todas las letras del abecedario inglés.
+¿Qué es un pangrama? Una oración que contiene todas las letras del alfabeto al menos una vez.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Componentes Clave:
 
-## Expanding the ESLint configuration
+Función isPangram:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Examina una oración para ver si tiene todas las letras del abecedario inglés.
+Usando un proceso simple, revisa si cada letra del alfabeto está presente en la oración.
+Si falta alguna letra, la función indica que no es un pangrama; si están todas, confirma que sí lo es.
+Componente PangramChecker:
 
-- Configure the top-level `parserOptions` property like this:
+Es la parte del programa que ves y con la que interactúas.
+Guarda la oración que escribes y muestra el resultado de la verificación.
+Te ofrece un espacio para ingresar la oración que deseas revisar.
+Al hacer clic en "Verificar", usa la función isPangram para determinar si es un pangrama o no.
+Después de la revisión, muestra si la oración es un pangrama o no.
+En Resumen:
+Pangram te ayuda a comprobar si una oración contiene todas las letras del alfabeto inglés. 
+Con una interfaz sencilla creada en React, solo necesitas ingresar la oración para saber rápidamente si es un pangrama o no.
+import React, { useState } from 'react';
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+const isPangram = (sentence: string): boolean => {
+  // Se define el alfabeto en inglés.
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  // Se convierte la oración a minúsculas para evitar problemas con mayúsculas.
+  const lowercasedSentence = sentence.toLowerCase();
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+  // Se recorre el alfabeto y se verifica si cada letra está presente en la oración.
+  for (let char of alphabet) {
+    if (!lowercasedSentence.includes(char)) {
+      return false;
+    }
+  }
+  // Si se recorrió todo el alfabeto sin problemas, significa que es un pangrama.
+  return true;
+};
+
+const PangramChecker: React.FC = () => {
+  // Estado para guardar la oración ingresada por el usuario.
+  const [sentence, setSentence] = useState<string>('');
+  // Estado para guardar el resultado de la verificación.
+  const [isPangramResult, setIsPangramResult] = useState<boolean | null>(null);
+
+  // Función para manejar el cambio en el input de la oración.
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSentence(event.target.value);
+  };
+
+  // Función para verificar si la oración es un pangrama.
+  const handleCheck = () => {
+    const result = isPangram(sentence);
+    setIsPangramResult(result);
+  };
+
+  return (
+    <div>
+      {/* Interfaz de usuario: input, botón y mensaje de resultado */}
+    </div>
+  );
+};
+
+export default PangramChecker;
+
+
+
