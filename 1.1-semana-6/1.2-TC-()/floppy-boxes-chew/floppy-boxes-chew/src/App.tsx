@@ -37,7 +37,9 @@ import {
 import { ForgotPassword } from "./pages/forgotPassword";
 import { Login } from "./pages/login";
 import { Register } from "./pages/register";
-import { ProductList,ProductCreate, ProductEdit, ProductShow } from "./pages/products";
+import { EmployeeList, EmployeeCreate } from "./pages/employees";
+import { ClientCreate, ClientEdit, ClientList, ClientShow } from "./pages/clients";
+
 
 function App() {
   return (
@@ -74,11 +76,21 @@ function App() {
                     },
                   },
                   {
-                    name: "products",
-                    list: "/products",
-                    create: "/products/create",
-                    edit: "/products/edit/:id",
-                    show: "/products/show/:id",
+                    name: "employees",
+                    list: "/employees",
+                    create: "/employees/create",
+                    edit: "/employees/edit/:id",
+                    show: "/employees/show/:id",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
+                  {
+                    name: "clients",
+                    list: "/clients",
+                    create: "/clients/create",
+                    edit: "/clients/edit/:id",
+                    show: "/clients/show/:id",
                     meta: {
                       canDelete: true,
                     },
@@ -117,19 +129,30 @@ function App() {
                       <Route path="edit/:id" element={<BlogPostEdit />} />
                       <Route path="show/:id" element={<BlogPostShow />} />
                     </Route>
+
+                    
                     <Route path="/categories">
                       <Route index element={<CategoryList />} />
                       <Route path="create" element={<CategoryCreate />} />
                       <Route path="edit/:id" element={<CategoryEdit />} />
                       <Route path="show/:id" element={<CategoryShow />} />
                     </Route>
-                     <Route path="/products">
-                      <Route index element={<ProductList />} />
-                      <Route path="create" element={<ProductCreate />} />
-                      <Route path="edit/:id" element={<ProductEdit />} />
-                      <Route path="show/:id" element={<ProductShow />} />
-
+                     <Route path="/employees">
+                      <Route index element={<EmployeeList />} />
+                      <Route path="create" element={<EmployeeCreate />} />
+                      <Route path="edit/:id" element={<CategoryEdit />} />
+                      <Route path="show/:id" element={<CategoryShow />} />
                     </Route>
+                    <Route path="/clients">
+                      <Route index element={<ClientList />} />
+                      <Route path="create" element={<ClientCreate />} />
+                      <Route path="edit/:id" element={<ClientEdit />} />
+                      <Route path="show/:id" element={<ClientShow />} />
+                    </Route>
+
+
+
+                  
                     
                     <Route path="*" element={<ErrorComponent />} />
                   </Route>
